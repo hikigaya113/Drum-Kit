@@ -1,6 +1,6 @@
 
 for(var i=0; i<document.querySelectorAll(".drum").length; i++){
-
+// click section
 document.querySelectorAll(".drum")[i].addEventListener("click",function (){
 
    var button=this.innerHTML;
@@ -12,7 +12,7 @@ addEventListener("keypress",function(event){
 makeSound(event.key);
 
 });
-
+// key press section
 function makeSound(key){
 
   switch (key) {
@@ -56,3 +56,13 @@ function makeSound(key){
   }
 
 }
+// animation
+function buttonanimation(currentKey){
+  var activebutton=document.querySelector("."+currentKey);
+  activebutton.classList.add("pressed");
+ setTimeout(function() {
+   activebutton.classList.remove("pressed");
+
+ },100)
+}
+
