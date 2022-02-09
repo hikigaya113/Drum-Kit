@@ -5,12 +5,13 @@ document.querySelectorAll(".drum")[i].addEventListener("click",function (){
 
    var button=this.innerHTML;
    makeSound(button);
+  buttonanimation(button);
 });
 }
 addEventListener("keypress",function(event){
 
 makeSound(event.key);
-
+buttonanimation(event.key);
 });
 // key press section
 function makeSound(key){
